@@ -7,6 +7,7 @@ To run the script, you need Python installed on your system along with the follo
 
 numpy
 pandas
+
 You can install these dependencies using pip:
 
 pip install numpy pandas
@@ -16,10 +17,13 @@ Dataset Preparation: Prepare your dataset in CSV format. The last column should 
 
 Run the Script: Execute the Python script (app.py) and provide the path to your dataset as an argument:
 
-bash
-Copy code
-python app.py CED.csv
+
+"python app.py CED.csv"
+
+
 View Results: The script will display the initialization of specific and general hypotheses, followed by the iteration steps of the algorithm. Finally, it will print the final specific and general hypotheses.
+
+
 Algorithm Overview
 The concept learning algorithm implemented in this script follows these steps:
 
@@ -29,5 +33,7 @@ Iterate through each instance in the dataset:
 If the target concept is "yes", update the specific and general hypotheses accordingly.
 If the target concept is "no", update the general hypothesis accordingly.
 Remove any redundant hypotheses from the final general hypothesis.
+
+
 Example
 Suppose we have a dataset (CED.csv) with instances of concepts and their corresponding target concepts. After running the script with this dataset, it will output the final specific and general hypotheses.
