@@ -1,43 +1,49 @@
-import numpy as np 
+import streamlit as st
+import numpy as np
 import pandas as pd
 
-data = pd.read_csv('CED.csv')
-concepts = np.array(data.iloc[:,0:-1])
-target = np.array(data.iloc[:,-1])  
 def learn(concepts, target): 
-    specific_h = concepts[0].copy()  
-    print("initialization of specific_h \n",specific_h)  
-    general_h = [["?" for i in range(len(specific_h))] for i in range(len(specific_h))]     
-    print("initialization of general_h \n", general_h)  
+    specific_h = concepts[0].copy()
+    general_h = [["?" for _ in range(len(specific_h))] for _ in range(len(specific_h))] 
 
     for i, h in enumerate(concepts):
         if target[i] == "yes":
-            print("If instance is Positive ")
             for x in range(len(specific_h)): 
-                if h[x]!= specific_h[x]:                    
+                if h[x] != specific_h[x]:                    
                     specific_h[x] ='?'                     
-                    general_h[x][x] ='?'
-                   
+                    general_h[x][x] ='?'                   
         if target[i] == "no":            
-            print("If instance is Negative ")
             for x in range(len(specific_h)): 
-                if h[x]!= specific_h[x]:                    
+                if h[x] != specific_h[x]:                    
                     general_h[x][x] = specific_h[x]                
                 else:                    
                     general_h[x][x] = '?'        
-
-        print(" step {}".format(i+1))
-        print(specific_h)         
-        print(general_h)
-        print("\n")
-        print("\n")
 
     indices = [i for i, val in enumerate(general_h) if val == ['?', '?', '?', '?', '?', '?']]    
     for i in indices:   
         general_h.remove(['?', '?', '?', '?', '?', '?']) 
     return specific_h, general_h 
 
-s_final, g_final = learn(concepts, target)
+def main():
+    st.title("Concept Learning Algorithm")
 
-print("Final Specific_h:", s_final, sep="\n")
-print("Final General_h:", g_final, sep="\n")
+    # Upload CSV file
+    uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+    if uploaded_file is not None:
+        data = pd.read_csv(uploaded_file)
+
+        st.write("Preview of the dataset:")
+        st.write(data.head())
+
+        concepts = np.array(data.iloc[:,0:-1])
+        target = np.array(data.iloc[:,-1])
+
+        if st.button("Run Learning Algorithm"):
+            s_final, g_final = learn(concepts, target)
+            st.write("Final Specific_h:")
+            st.write(s_final)
+            st.write("Final General_h:")
+            st.write(g_final)
+
+if _name_ == "_main_":
+    main()
