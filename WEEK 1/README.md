@@ -20,6 +20,7 @@ Run the Script:
 Execute the Python script (app.py) and provide the path to your dataset as an argument:
 
    "python app.py,CED.csv"
+   
 View Results: 
 The script will display the initialization of specific and general hypotheses, followed by the iteration steps of the algorithm. Finally, it will print the final specific and general hypotheses.
 
@@ -35,3 +36,6 @@ The concept learning algorithm implemented in this script follows these steps:
 
 Example:
 Suppose we have a dataset (CED.csv) with instances of concepts and their corresponding target concepts. After running the script with this dataset, it will output the final specific and general hypotheses.
+
+Streamlit link : https://sudeshna123.streamlit.app/
+Medium blog : https://thirishashalini12.medium.com/candidate-elimination-algorithm-081db3c87460
