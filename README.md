@@ -1,6 +1,4 @@
-Sure, here's a condensed version of your README.md:
 
----
 
 # Artificial Neural Network with Backpropagation
 
