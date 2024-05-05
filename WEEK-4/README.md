@@ -1,30 +1,46 @@
-Naive Bayes Classifier
+Sure, here's a README file for your Naive Bayes Classifier Streamlit app:
 
-Overview
+---
+
+# Naive Bayes Classifier
+
+## Overview
+
 This is a simple Streamlit web application for training and testing a Naive Bayes classifier on a dataset provided by the user via CSV file upload. The app preprocesses the data, trains the classifier, and then tests it to compute accuracy.
 
-Requirements
-Python 3.x
-Streamlit
-pandas
-scikit-learn
+## Requirements
+
+- Python 3.x
+- Streamlit
+- pandas
+- scikit-learn
 
 You can install the required Python packages via pip:
+
+```bash
 pip install streamlit pandas scikit-learn
+```
 
+## Usage
 
-Usage
-Clone this repository or download the main.py file.
-Install the required Python packages as mentioned above.
-Run the Streamlit app using the following command:
-streamlit run app.py
+1. Clone this repository or download the `main.py` file.
 
+2. Install the required Python packages as mentioned above.
 
-Once the app is running, you will see a file uploader prompting you to upload your training data CSV file.
-Upload your CSV file containing your training data. Make sure the target variable is in the last column.
-The app will preprocess the data, train the Naive Bayes classifier, test it, and display the accuracy.
+3. Run the Streamlit app using the following command:
 
+```bash
+streamlit run main.py
+```
 
-Files
-main.py: Contains the Streamlit app code.
-README.md: Instructions and information about the app.
+4. Once the app is running, you will see a file uploader prompting you to upload your training data CSV file.
+
+5. Upload your CSV file containing your training data. Make sure the target variable is in the last column.
+
+6. The app will preprocess the data, train the Naive Bayes classifier, test it, and display the accuracy.
+
+## Files
+
+- `main.py`: Contains the Streamlit app code.
+- `README.md`: Instructions and information about the app.
+
