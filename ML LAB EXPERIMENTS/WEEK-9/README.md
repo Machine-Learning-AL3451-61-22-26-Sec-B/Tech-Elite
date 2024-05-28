@@ -54,12 +54,7 @@ This Streamlit app demonstrates Locally Weighted Regression (LWR) on the Boston 
 
 The app uses the Boston Housing dataset from the [CMU StatLib repository](http://lib.stat.cmu.edu/datasets/boston). The dataset contains 506 samples of houses, with each sample having 13 features and a target variable indicating the median value of owner-occupied homes.
 
-## File Structure
 
-lwr-boston-housing/
-├── app.py # Main Streamlit app
-├── requirements.txt # Required Python packages
-└── README.md # This readme file
 
 MEDIUM LINK :https://thirishashalini12.medium.com/examining-locally-weighted-non-parametric-regression-an-effective-instrument-for-adaptable-data-ca687aa5ef88
 
