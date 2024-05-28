@@ -54,9 +54,7 @@ An example notebook (examples/ANN_Backpropagation_Example.ipynb) is provided to 
 
 Contributions are welcome! If you have suggestions or improvements, please submit a pull request.
 
-## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 Medium link :https://medium.com/@sudeshnamahalingam2004/building-an-artificial-neural-network-with-backpropagation-algorithm-19972da8ec64
